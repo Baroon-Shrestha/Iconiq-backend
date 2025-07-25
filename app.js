@@ -13,14 +13,18 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://full-stack-iconiq.vercel.app",
   "https://iconiq-frontend.vercel.app",
-  "https://iconiq-frontend-cacjln3hl-baroon-shresthas-projects.vercel.app/",
 ];
 app.use(
   cors({
-    origin: allowedOrigins,
-    credentials: true,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // must be true to allow cookie sharing
   })
 );
 
