@@ -10,6 +10,7 @@ const server = http.createServer(app);
 const allowedOrigins = [
   "http://localhost:5173", // for local dev
   "https://full-stack-iconiq.vercel.app", // your deployed frontend
+  "https://iconiq-frontend.vercel.app",
   "https://iconiq-frontend-cacjln3hl-baroon-shresthas-projects.vercel.app/",
 ];
 
