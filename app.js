@@ -14,6 +14,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "https://full-stack-iconiq.vercel.app",
+  "https://iconiq-frontend.vercel.app",
   "https://iconiq-frontend-cacjln3hl-baroon-shresthas-projects.vercel.app/",
 ];
 app.use(
