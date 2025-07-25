@@ -13,7 +13,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://iconiq-frontend.vercel.app",
+  "https://fulliconiq.vercel.app",
 ];
 app.use(
   cors({
