@@ -27,7 +27,7 @@ cloudinary.config({
 // Connect DB and start server
 database()
   .then(() => {
-    const PORT = process.env.PORT || 3000;
+    const PORT = process.env.PORT;
     server.listen(PORT, () => {
       console.log(`🚀 Server + Socket.IO running at http://localhost:${PORT}`);
     });
